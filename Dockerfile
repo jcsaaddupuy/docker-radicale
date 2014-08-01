@@ -12,17 +12,22 @@ RUN apt-get install -y python2.7 python-pip
 RUN pip install radicale
 ######
 
-# Fix empty $HOME
 # Adds a custom non root user with home directory
 RUN useradd -d /home/radicale -m radicale 
 
 # Create some folder
 RUN mkdir -p /data/radicale
+RUN mkdir -p /home/radicale/.config
+RUN ln -s /data/radicale /home/radicale/.config/radicale
+
+RUN chown -R radicale /data/radicale/
+RUN chown -R radicale /home/radicale/.config
 ######
 
  
 EXPOSE 5232
 
+# Fix empty $HOME
 ENV HOME /home/radicale
 USER radicale
 WORKDIR /home/radicale
