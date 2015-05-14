@@ -1,4 +1,4 @@
-FROM debian:wheezy
+FROM debian:jessie
 MAINTAINER Jean-Christophe Saad-Dupuy <jc.saaddupuy@fsfe.org>
 
 ENV DEBIAN_FRONTEND noninteractive
