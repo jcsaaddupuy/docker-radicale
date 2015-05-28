@@ -27,6 +27,8 @@ RUN chown -R radicale /home/radicale/.config
  
 EXPOSE 5232
 
+VOLUME ["/data/radicale"]
+
 # Fix empty $HOME
 ENV HOME /home/radicale
 USER radicale
