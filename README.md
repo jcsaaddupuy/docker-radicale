@@ -1,7 +1,7 @@
 docker-radicale
 ===============
 
-The [radicale](http//radicale.org/) CalDAV/CardDAV server with default configuration, running in a container.
+The [radicale](http://radicale.org/) CalDAV/CardDAV server with default configuration, running in a container.
 
 
 Build
